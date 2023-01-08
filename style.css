@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'android'; 
+    src: url(fontes/idroid.otf) format('opentype');
+    font-weight: normal;
+}
+
+:root { /*Pasta raiz*/
+    --cor0:#c5ebd6;
+    --cor1:#83e1ad;
+    --cor2:#3ddc84;
+    --cor3:#2fa866;
+    --cor4:#1a5c37;
+    --cor5:#063d1e;
+
+    --fonte-padrao: Arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', Cursive;
+}
+* { /*Zera todas configuracoes, mesmo as que nao foram especificadas */
+    margin: 0px;
+    padding: 0px;
+}
+
+
+header {
+    /*background-color: rgba(0, 128, 0, 0.383);*/
+    display: block;
+    /*width: auto; nao sei pra que coloquei antes*/
+    /* descobrir pq o min height 150 nao foi suficiente para ficar igual ao primeiro exercicio */
+    min-height: 191px;
+    background-image:linear-gradient(to bottom, var(--cor3), var(--cor5));
+    color: white;
+    text-align: center;
+  
+}
+body {
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+header > h1 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    font-weight: normal;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.404);
+    /*pra que padding ou margin em outro local se so aqui da pra afastar o titulo do menu de navegacao; deixando o restante zerado*/
+}
+
+header > p {
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 500px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.404);
+}
+
+nav {
+   background-color:  var(--cor5);
+   padding: 10px;
+}
+
+nav > a {
+    color: aliceblue;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 3px;
+    transition-duration: .6s;
+}
+
+nav > a:hover {
+    background-color: rgba(255, 255, 255, 0.706);
+    color: black;
+    /* nao sei pq essa merda de margem nao cola com a do lado mesmo especificando tudo com 0   sempre fica um espaco entre os hover, ou seja, sempre vai ter espaco entre um texto e outro nao sei pq*/
+}
+
+article {
+    background-color: aliceblue ;
+    /* margin:20px; */ /* px temporario*/
+}
+
+.font-android {
+    font-family: var(--fonte-android);
+}
+
+.font-gradient {
+    background-image:linear-gradient(to right, var(--cor1), white);
+}
+
+main {
+    
+}
+
+article {
+    padding-top: 20px;
+}
